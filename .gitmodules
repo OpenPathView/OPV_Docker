@@ -1,0 +1,15 @@
+[submodule "OpenSfM"]
+	path = OpenSfM
+	url = https://github.com/mapillary/OpenSfM.git
+[submodule "OPV_Tasks"]
+	path = OPV_Tasks
+	url = https://github.com/OpenPathView/OPV_Tasks.git
+[submodule "OPV_DBRest"]
+	path = OPV_DBRest
+	url = https://github.com/OpenPathView/OPV_DBRest.git
+[submodule "OPV_Celery"]
+	path = OPV_Celery
+	url = https://github.com/OpenPathView/OPV_Celery.git
+[submodule "DirectoryManager"]
+	path = DirectoryManager
+	url = https://github.com/OpenPathView/DirectoryManager.git
