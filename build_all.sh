@@ -16,9 +16,6 @@ cd ..
 cd hugin/
 docker build --compress  -t hugin .
 cd -
-cd opv-hugin/
-docker build --compress  -t opv-hugin .
-cd -
 
 # Build opv-tasks
 cd OPV_Tasks/

@@ -24,6 +24,8 @@ RUN make -j8
 
 RUN make install
 
-WORKDIR /
+WORKDIR /source/OpenSfM/
+
+RUN python3 setup.py install
 
 RUN rm -rf /source/hugin
