@@ -4,9 +4,11 @@ services:
   dm:
     image: opv-dm
     ports:
-      - "5005:5000"
+      - "5005:5005"
       - "2121:2121"
       - "5050:5050"
+    environment:
+      OPV_DM_PORT: 5005
   
   postgres:
     image: mdillon/postgis
@@ -38,6 +40,11 @@ services:
       - redis
       - dbrest
       - dm
+    environment:
+      OPV_TASKS_DBREST_ADDRESS: dbrest
+      OPV_TASKS_DBREST_PORT: 5000
+      OPV_TASKS_DIRMANAGER_ADDRESS: dm
+      OPV_TASKS_DIRMANAGER_PORT: 5005
 
   flower:
     image: opv-flower
@@ -45,3 +52,12 @@ services:
       - redis
     ports:
       - "5555:5555"
+
+#  opv-status:
+#    image: opv-status
+#    depends_on:
+#      - redis
+#      - dbrest
+#      - dm
+#    ports:
+#      - "80:80"

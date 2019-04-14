@@ -19,6 +19,36 @@ Need to be test with data.
 docker-compose up
 ```
 
+## Test it
+
+You need data to test
+
+### Install OPV_Import
+
+[See OPV_importData](https://github.com/OpenPathView/OPV_importData)
+
+### Import data
+
+```bash
+opv-make-lot --csv-path=picturesInfo.csv --api-uri=http://127.0.0.1:5000 --dm-uri=http://127.0.0.1:5005 SD
+```
+
+### Launch it
+
+Connect to the docker:
+
+```bash
+docker exec -it docker_celery_1 /bin/bash
+```
+
+Launch it
+
+```bash
+opv-celery-campaign 1 42
+```
+
+[See progress here](http://127.0.0.1:5555)
+
 ## Links
 
 You can acces DirectoryManager throw FTP with port
