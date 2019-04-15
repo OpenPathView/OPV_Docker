@@ -37,3 +37,16 @@ cd -
 cd DirectoryManager/
 docker build --compress  -t opv-dm .
 cd -
+
+cd opv-status/
+docker build --compress  -t opv-status .
+cd -
+
+cd opv-status-api/
+docker build --compress  -t opv-status-api .
+cd -
+
+cd opv-graphe/
+docker build --compress  -t opv-graph .
+cd -
+

@@ -13,3 +13,12 @@
 [submodule "DirectoryManager"]
 	path = DirectoryManager
 	url = https://github.com/OpenPathView/DirectoryManager.git
+[submodule "opv-graphe"]
+	path = opv-graphe
+	url = https://github.com/OpenPathView/opv-graphe.git
+[submodule "opv-status"]
+	path = opv-status
+	url = https://github.com/OpenPathView/opv-status.git
+[submodule "opv-status-api"]
+	path = opv-status-api
+	url = https://github.com/OpenPathView/opv-status-api.git

@@ -45,6 +45,7 @@ services:
       OPV_TASKS_DBREST_PORT: 5000
       OPV_TASKS_DIRMANAGER_ADDRESS: dm
       OPV_TASKS_DIRMANAGER_PORT: 5005
+      CELERY_CONCURRENCY: 2
 
   flower:
     image: opv-flower
@@ -52,12 +53,28 @@ services:
       - redis
     ports:
       - "5555:5555"
+  status:
+    image: opv-status-api
+    depends_on:
+      - redis
+      - dbrest
+      - dm
+    ports:
+      - "5001:5001"
 
-#  opv-status:
-#    image: opv-status
-#    depends_on:
-#      - redis
-#      - dbrest
-#      - dm
-#    ports:
-#      - "80:80"
+  graph:
+    image: opv-graph
+    ports:
+      - "5015:5015"
+
+  opv-status:
+    image: opv-status
+    depends_on:
+      - redis
+      - dbrest
+      - dm
+      - status
+      - graph
+    ports:
+      - "80:80"
+
