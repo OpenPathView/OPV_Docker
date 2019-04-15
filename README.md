@@ -19,7 +19,7 @@ Need to be test with data.
 docker-compose up
 ```
 
-## Test it
+## Test it
 
 You need data to test
 
@@ -47,12 +47,13 @@ Launch it
 opv-celery-campaign 1 42
 ```
 
-[See progress here](http://127.0.0.1:5555)
+[See progress here](http://127.0.0.1:5555) [and in OPV_Status](http://127.0.0.1:80)
 
 ## Links
 
 You can acces DirectoryManager throw FTP with port
 
+* OPV_Status => [http://127.0.0.1:80](http://127.0.0.1:80)
 * DirectoryManager HTTP API => [http://127.0.0.1:5005](http://127.0.0.1:5005/v1/ls)
 * DirectoryManager FTP => [ftp://127.0.0.1:2121](ftp://127.0.0.1:2121)
 * OPV_DBRest => [http://127.0.0.1:5000](http://127.0.0.1:5000)
@@ -83,4 +84,5 @@ Is build on top of **opv-celery** image
 ### Sumary
 
 **opensfm <= hugin <= tasks <= opv-celery**
+
 
